@@ -16,8 +16,9 @@
   package metadata.
 - [ ] Enable GitHub private vulnerability reporting, or publish a concrete
   private security contact.
-- [ ] Require a green first hosted CI run. CI covers Python 3.10–3.13 on Linux
-  plus Python 3.13 on Windows and macOS.
+- [x] The first hosted CI run is green. It covers Python 3.10–3.13 on Linux,
+  Python 3.13 on Windows and macOS, dependency auditing, release-boundary
+  checks, static quality gates, and clean package installation.
 - [ ] Only after the permission and CI items above: tag `0.1.0` and consider a
   package release. Do not upload the package to PyPI first.
 
