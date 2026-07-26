@@ -40,6 +40,7 @@ def test_allowlist_accepts_public_source_document_and_metadata_shapes(tmp_path):
         "tests/test_example.py",
         "docs/guide.rst",
         "licenses/LUCIDE.txt",
+        ".github/release-notes/v0.1.0.md",
         ".github/workflows/ci.yml",
         ".github/ISSUE_TEMPLATE/bug_report.yaml",
         "answers/.gitkeep",

@@ -249,7 +249,11 @@ def _is_allowlisted_path(name: str) -> bool:
     if parts and parts[0] == ".github" and suffix in ALLOWED_GITHUB_SUFFIXES:
         if len(parts) == 2:
             return True
-        if len(parts) == 3 and parts[1] in {"ISSUE_TEMPLATE", "workflows"}:
+        if len(parts) == 3 and parts[1] in {
+            "ISSUE_TEMPLATE",
+            "release-notes",
+            "workflows",
+        }:
             return True
 
     return False

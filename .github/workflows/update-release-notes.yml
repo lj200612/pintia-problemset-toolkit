@@ -1,0 +1,42 @@
+name: Update release notes
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/release-notes/*.md"
+      - ".github/workflows/update-release-notes.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-release-notes
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Sync versioned notes to existing releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          shopt -s nullglob
+          notes_files=(.github/release-notes/*.md)
+          for notes_file in "${notes_files[@]}"; do
+            tag="$(basename "$notes_file" .md)"
+            if [[ ! "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+([.-][0-9A-Za-z.-]+)?$ ]]; then
+              echo "::error file=$notes_file::Release note filename is not a valid version tag"
+              exit 1
+            fi
+            if gh release view "$tag" >/dev/null 2>&1; then
+              gh release edit "$tag" --notes-file "$notes_file"
+            else
+              echo "::notice file=$notes_file::Release $tag does not exist yet; skipping"
+            fi
+          done
