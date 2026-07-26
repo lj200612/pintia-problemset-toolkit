@@ -21,6 +21,14 @@ bundle/
 preview/
 .cursor/
 
+# 仅供本地维护的 Markdown 文档
+/CHANGELOG.md
+/CODE_OF_CONDUCT.md
+/CONTRIBUTING.md
+/PRIVACY.md
+/SECURITY.md
+/THIRD_PARTY_NOTICES.md
+
 # Python
 __pycache__/
 *.py[cod]
