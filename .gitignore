@@ -1,0 +1,44 @@
+# 敏感配置与本地环境（可能包含登录 Cookie）
+config.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# 运行日志与本地工作数据
+logs/
+answers/*
+!answers/.gitkeep
+problems/*
+!problems/.gitkeep
+
+# 仅供本地审计/开发的资料和生成物，不属于公开发行包
+PTA_API_NOTES.md
+bundle/
+preview/
+.cursor/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+build/
+dist/
+
+# 编辑器与操作系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini

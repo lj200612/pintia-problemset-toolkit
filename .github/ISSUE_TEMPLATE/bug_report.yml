@@ -1,0 +1,54 @@
+name: Bug 报告
+description: 报告可复现的功能错误；安全问题请使用私密安全报告。
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请勿粘贴 Cookie、密码、本地访问令牌、真实姓名/学号、题面、答案、提交 ID 或未公开漏洞。使用合成数据复现。
+  - type: input
+    id: version
+    attributes:
+      label: 版本
+      description: 发布版本或提交哈希。
+      placeholder: 0.1.0 / commit hash
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 环境
+      description: 操作系统、Python 版本，以及 CLI 或 WebUI。
+      placeholder: Windows 11, Python 3.13, WebUI
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 最小复现步骤
+      description: 使用 example.invalid、占位 ID 和自行编写的最小代码。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为
+      description: 日志须先脱敏；不要上传 config.json。
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已确认这不是需要私下报告的安全问题。
+          required: true
+        - label: 我已移除凭据、个人信息、真实 ID、题面和答案。
+          required: true
