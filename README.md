@@ -4,12 +4,6 @@
 
 > [!IMPORTANT]
 > 本项目是非官方社区项目，与 PTA、拼题 A、Pintia、浙江大学及相关运营方没有隶属、合作、认可或授权关系。相关名称与商标归各自权利人所有。
->
-> 仅在你有权使用的账号、题集和内容上使用本工具，并遵守平台规则、课程要求及适用法律。请勿用于代做、绕过考试限制、批量滥用接口或获取未获授权的内容。
-
-本项目没有取得官方 API 授权，当前也没有核实平台是否许可这类自动化访问。未找到公开条款或文档不代表允许使用；运行前请自行向题集所属组织和平台确认规则。遇到 `429` 或其他限流响应时应停止或降低请求频率，不能把客户端观察到的限额当作使用许可。
-
-当前版本为 `0.1.0` Alpha：适合在本地测试，接口兼容性和配置格式仍可能变化。
 
 ## 功能与边界
 
@@ -145,7 +139,7 @@ pta-web
 1. 浏览器辅助登录：本地页面把账号和密码交给本地后端，再由临时 Chromium 窗口填入；账号和密码不写入配置文件，但登录成功后的 Cookie 会写入 `config.json`。
 2. 手动粘贴 Cookie：校验成功后，Cookie 会写入 `config.json`。
 
-WebUI 的“退出登录”会清空配置文件中的 Cookie，但不会删除答案、题面、CLI 日志或浏览器 `localStorage` 中的编辑草稿。完整数据流和删除方法见 [PRIVACY.md](PRIVACY.md)。
+WebUI 的“退出登录”会清空配置文件中的 Cookie，但不会删除答案、题面、CLI 日志或浏览器 `localStorage` 中的编辑草稿。
 
 ## 命令行
 
@@ -227,8 +221,6 @@ python pta_fetch.py --combined
 
 `baseUrl` 和 `extraHeaders` 是高级配置。修改它们会改变请求目的地或内容；不要使用来源不明的配置文件，因为 Cookie 可能随请求发送到配置的服务。
 
-详见 [PRIVACY.md](PRIVACY.md) 和 [SECURITY.md](SECURITY.md)。
-
 ## 项目结构
 
 ```text
@@ -244,16 +236,6 @@ tests/                    # 自动化测试
 scripts/check_release.py  # 发布边界与凭据检查
 config.example.json       # 无凭据的配置示例
 ```
-
-## 参与贡献与安全报告
-
-- 贡献流程和内容边界：[CONTRIBUTING.md](CONTRIBUTING.md)
-- 安全漏洞私下报告：[SECURITY.md](SECURITY.md)
-- 行为准则：[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
-- 第三方组件说明：[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)
-- 版本变更：[CHANGELOG.md](CHANGELOG.md)
-
-不要在公开 Issue 中发布真实 Cookie、账号、题目内容、学生信息或可直接利用的漏洞细节。
 
 ## 许可证
 
