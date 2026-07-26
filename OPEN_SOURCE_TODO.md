@@ -1,8 +1,8 @@
 # Open-source release TODO
 
-> Status on 2026-07-26: **technical hardening is complete, but do not publish
-> yet**. The remaining blockers require a maintainer decision, a repository
-> remote, or permission that cannot be inferred from the codebase.
+> Status on 2026-07-26: **the reviewed source tree is public, but do not tag or
+> publish a package release yet**. The remaining blockers require a maintainer
+> decision, hosted CI, or permission that cannot be inferred from the codebase.
 
 ## Manual blockers before publication
 
@@ -53,7 +53,7 @@
 - [x] The wheel installs in a clean Python 3.10 environment; all four CLI
   `--help` commands, installed static assets, API-token enforcement, and Flask
   index/status smoke checks pass without contacting PTA/Pintia.
-- [x] The explicit 54-file public allowlist is staged and passes the release
+- [x] The explicit 54-file public allowlist is committed and passes the release
   guard. The pre-existing remote history contained only the reviewed MIT
   `LICENSE` file.
 
