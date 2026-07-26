@@ -1,0 +1,22 @@
+{
+  "baseUrl": "https://pintia.cn",
+  "problemSetId": "",
+  "cookie": "",
+  "answersDir": "answers",
+  "defaultCompiler": "GCC",
+  "compilerByExtension": {
+    ".c": "GCC",
+    ".cpp": "GXX",
+    ".cc": "GXX",
+    ".cxx": "GXX",
+    ".py": "PYTHON3",
+    ".java": "JAVAC"
+  },
+  "pollIntervalSeconds": 2,
+  "pollTimeoutSeconds": 120,
+  "submitDelaySeconds": 1.5,
+  "logDir": "logs",
+  "problemsDir": "problems",
+  "fetchDelaySeconds": 0.5,
+  "extraHeaders": {}
+}
