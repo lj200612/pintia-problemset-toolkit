@@ -36,7 +36,6 @@ ALLOWED_ROOT_FILES = frozenset(
         ".gitattributes",
         ".gitignore",
         "LICENSE",
-        "OPEN_SOURCE_TODO.md",
         "README.md",
         "config.example.json",
         "pta_fetch.py",

@@ -22,6 +22,7 @@ preview/
 .cursor/
 
 # 仅供本地维护的 Markdown 文档
+/OPEN_SOURCE_TODO.md
 /CHANGELOG.md
 /CODE_OF_CONDUCT.md
 /CONTRIBUTING.md

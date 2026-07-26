@@ -58,6 +58,7 @@ def test_allowlist_accepts_public_source_document_and_metadata_shapes(tmp_path):
         "tool.exe",
         "random.py",
         "config.json",
+        "OPEN_SOURCE_TODO.md",
         "pta/web/screenshot.jpg",
         "pta/nested/hidden.py",
         "tests/fixtures/archive.zip",
